@@ -4878,7 +4878,10 @@ function dismissToast(toast) {
 </div>
 
 <script>
+  document.getElementById('intro-overlay').style.display = 'none'
   document.getElementById('intro-date-badge').textContent = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })
+  switchRole()
+  showSellerView('seller-opportunities')
   renderOppPills()
   const syncedEl = document.getElementById('opp-synced-time')
   if (syncedEl) syncedEl.textContent = new Date().toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' })
